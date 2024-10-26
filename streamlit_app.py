@@ -203,7 +203,7 @@ categorical_cols = data.select_dtypes(include=['object']).columns.tolist()
 # which plots can be made for categorical columns
 st.subheader("Plots for Categorical Columns")
 if categorical_cols:
-    plot_type = st.selectbox("Select Plot Type", ["Count Plot", "Pie Chart", "Box Plot", "Violin Plot", "Bar Plot", "Swarm Plot", "Strip Plot"])
+    plot_type = st.selectbox("Select Plot Type", ["Count Plot", "Pie Chart"])
     selected_col = st.selectbox("Select a Column", categorical_cols)
     if plot_type == "Count Plot":
         fig, ax = plt.subplots(figsize=(10, 6))
